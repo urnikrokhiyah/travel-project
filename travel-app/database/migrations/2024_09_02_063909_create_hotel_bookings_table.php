@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('checkout_at');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('hotel_id')->constrained()->onDelete('cascade');
+            $table->foreignId('room_id')->constrained()->onDelete('cascade');
             $table->unsignedBigInteger('total_amount');
             $table->unsignedBigInteger('total_day');
             $table->boolean('is_paid');
